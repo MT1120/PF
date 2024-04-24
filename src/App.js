@@ -3,8 +3,8 @@
 import Home from "./components/Home"
 import AboutUs from "./components/aboutUs"
 import News from "./components/News_m"
-import Login from "./components/lComponent"
-import Register from "./components/rComponent"
+import Login from "./components/Login"
+import Register from "./components/Register"
 
 
 // https://github.com/fireclint/data-finance-react-tailwind/blob/main/src/components/Analytics.jsx
