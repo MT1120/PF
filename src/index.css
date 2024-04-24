@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282638;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 body {
 
     background-color: #282638;
+}
+
+.sidebar-container {
+    @apply bg-glass h-[96%]  rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass relative
 }
