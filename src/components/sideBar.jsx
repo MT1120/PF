@@ -1,8 +1,8 @@
 import { BiChevronLeft } from "react-icons/bi"
 import { useState } from "react"
 import React from "react"
-import UserProfile from "./UserProfile"
-import SidebarData from "./SidebarData"
+import UserProfile from "./sideBar/UserProfile"
+import SidebarData from "./sideBar/SidebarData"
 
 export default function Sidebar() {
     const [toggle, setToggle] = useState(false)
@@ -10,7 +10,7 @@ export default function Sidebar() {
         <div className={`${toggle ? "w-[5rem]" : "w-[20rem]"} sidebar-container`}>
             <UserProfile toggle = {toggle}/>
             <SidebarData toggle = {toggle}/>
-            <div className="absolute top-[7rem] flex justify-center items-center -left-5 w-10 h-10 bg-glass rounded-full cursor-pointer" 
+            <div className="absolute top-[7rem] flex justify-center items-center -left-5 w-9 h-9 bg-glass rounded-full cursor-pointer" 
             onClick={() => {
                 setToggle(!toggle);
             }}>

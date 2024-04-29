@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './Form'
+import Form from './Login&Register/Form'
 import NavBarHome from './navBarHome'
 
 export default function Login() {

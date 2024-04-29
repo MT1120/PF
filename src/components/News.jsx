@@ -45,7 +45,7 @@ export default function News() {
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-blue-700 sm:text-4xl">Noticias y Consejos</h2>
                     <p className="mt-2 text-lg leading-8 text-white">
-                        Aprende a usar la plataforma y  tips sobre como administrar tu negocio.
+                        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                     </p>
                 </div>
                 <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">

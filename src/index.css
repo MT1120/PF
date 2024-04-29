@@ -32,3 +32,7 @@ body {
 .sidebar-container {
     @apply bg-glass h-[96%]  rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass relative
 }
+
+.sidebar {
+  @apply flex items-center mt-5 p-3 cursor-pointer rounded-full hover:bg-white hover:text-home transition-all duration-300
+}
