@@ -35,16 +35,34 @@ const posts = [
                 {Img1}
         },
     },
+    {
+        id: 3,
+        title: 'Principales tipos de Bases de Datos: Una visión general para principiantes',
+        href: '#',
+        description:
+            'Explora los diferentes tipos de bases de datos, como las relacionales, NoSQL y de grafos, y comprende las características distintivas de cada una. Esta guía te ayudará a entender las opciones disponibles y a elegir la más adecuada para tus necesidades.',
+        date: 'Abr 21, 2024',
+        datetime: '2024-04-21',
+        category: { title: 'Bases de Datos', href: '#' },
+        author: {
+            name: 'María García',
+            role: 'Analista de Datos',
+            href: '#',
+            imageUrl:
+                {Img1}
+        },
+    },
+    
 ]
 
 export default function News() {
     return (
 
         <div className=" py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl py-5 px-6 lg:px-8  bg-white opacity-65 rounded-xl">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-blue-700 sm:text-4xl">Noticias y Consejos</h2>
-                    <p className="mt-2 text-lg leading-8 text-white">
+                    <p className="mt-2 text-lg leading-8 text-home">
                         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                     </p>
                 </div>
@@ -52,12 +70,12 @@ export default function News() {
                     {posts.map((post) => (
                         <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
                             <div className="flex items-center gap-x-4 text-xs">
-                                <time dateTime={post.datetime} className="text-gray-500">
+                                <time dateTime={post.datetime} className="text-home">
                                     {post.date}
                                 </time>
                                 <a
                                     href={post.category.href}
-                                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                                    className="relative z-10 rounded-full bg-nav px-3 py-1.5 font-medium text-black hover:bg-gray-100"
                                 >
                                     {post.category.title}
                                 </a>
@@ -69,7 +87,7 @@ export default function News() {
                                         {post.title}
                                     </a>
                                 </h3>
-                                <p className="mt-5 line-clamp-3 text-sm leading-6 text-white">{post.description}</p>
+                                <p className="mt-5 line-clamp-3 text-sm leading-6 text-black">{post.description}</p>
                             </div>
                             <div className="relative mt-8 flex items-center gap-x-4">
                                 <img src={post.author.imageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
