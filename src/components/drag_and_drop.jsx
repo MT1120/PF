@@ -1,4 +1,4 @@
-import DragD from "../drag_and_dropP/index"
+import DragD from "./drag_and_dropP/index"
 
 export default function Drag_and_drop() {
     const listItems = [
