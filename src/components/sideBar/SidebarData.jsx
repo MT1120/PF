@@ -14,7 +14,7 @@ const SidebarData = ({toggle}) => {
               <div className={`mr-9  text-[1.5rem] ${toggle ? "":"ml-1"}`}>
                 {data.icon}
               </div>
-              <div className= {`${toggle ? "opacity-0 " : ""} text-[1rem]  `}>
+              <div className= {`${toggle ? "opacity-0 " : ""} text-[1rem]`}>
                 {data.text}
               </div>
             </div>

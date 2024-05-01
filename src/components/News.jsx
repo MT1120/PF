@@ -59,7 +59,7 @@ export default function News() {
     return (
 
         <div className=" py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl py-5 px-6 lg:px-8  bg-white opacity-65 rounded-xl">
+            <div className="mx-auto max-w-7xl py-5 px-6 lg:px-8  bg-white  rounded-xl">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-blue-700 sm:text-4xl">Noticias y Consejos</h2>
                     <p className="mt-2 text-lg leading-8 text-home">

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { FaArrowRight, FaBars } from 'react-icons/fa'
 // import Logo from './assets/Logo.png'
-import { DiDatabase } from "react-icons/di";
+import { SiCurseforge } from "react-icons/si";
 
 const navigation = [
     { name: 'Sobre nosotros', href: '/aboutUs' },
@@ -22,7 +22,7 @@ export default function NavBarHome() {
                     <div className="flex lg:flex-1">
                         <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">DATA FORGE</span>
-                            <DiDatabase
+                            <SiCurseforge
                                 className="h-10 w-10 p-.5 text-sky-950 bg-cyan-500  rounded-full"
 
                                 alt=""
@@ -61,7 +61,7 @@ export default function NavBarHome() {
                         <div className="flex items-center justify-between">
                             <a href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Data Forge</span>
-                                <DiDatabase
+                                <SiCurseforge
                                     className="h-10 w-10 p-.5 text-sky-950 bg-cyan-500  rounded-full"
 
                                     alt=""
