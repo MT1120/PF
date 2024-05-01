@@ -2,7 +2,7 @@
 
 import Home from "./components/Home"
 import AboutUs from "./components/aboutUs"
-import News from "./components/News_m"
+import News from "./components/News"
 import Login from "./components/Login"
 import Register from "./components/Register"
 import Prueba from "./components/prueba"
