@@ -1,8 +1,8 @@
 import { BiChevronLeft } from "react-icons/bi"
 import { useState } from "react"
 import React from "react"
-import UserProfile from "./sideBar/UserProfile"
-import SidebarData from "./sideBar/SidebarData"
+import UserProfile from "./UserProfile"
+import SidebarData from "./SidebarData"
 
 export default function Sidebar() {
     const [toggle, setToggle] = useState(false)

@@ -1,4 +1,4 @@
-import SideBar from "./sideBar"
+import SideBar from "../sideBar/sideBar"
 
 import { ImBooks } from "react-icons/im";
 import { SiCurseforge } from "react-icons/si";
@@ -28,7 +28,7 @@ const content = [
 
 ]
 
-export default function Prueba() {
+export default function LoginH() {
     return (
         <div className="w-full h-screen ">
             <nav className="bg-nav h-[80px]">
