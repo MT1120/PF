@@ -1,14 +1,22 @@
 import React from 'react'
 import { BiChevronLeft } from "react-icons/bi"
 import { useState } from "react"
-import { SiCurseforge } from "react-icons/si";
+import UserProfile from './UserProfile';
 
 
 
-export default function sideBarNavigation() {
+
+export default function SideBarNavigation() {
+  const [toggle, setToggle] = useState(false);
   return (
-    <div className='w-full h-screen'>
-      
+    <div className={`${toggle ? "w-[5rem]" : "w-[20rem]"} sidebar-container`}>
+      <UserProfile toggle = {toggle}/>
+      <div className="absolute top-[7rem] flex justify-center items-center -left-5 w-9 h-9 bg-glass rounded-full cursor-pointer"
+        onClick={() => {
+          setToggle(!toggle);
+        }}>
+        <BiChevronLeft className={`${toggle ? "rotate-180" : ""} text-3xl transition-all duration-300`} />
+      </div>
     </div>
   )
 }

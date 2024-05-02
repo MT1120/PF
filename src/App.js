@@ -6,6 +6,7 @@ import News from "./components/News"
 import Login from "./components/Login"
 import Register from "./components/Register"
 import LoginH from "./components/loginUI/loginHome"
+import Prueba from "./components/loginUI/prueba"
 
 
 // https://github.com/fireclint/data-finance-react-tailwind/blob/main/src/components/Analytics.jsx
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/LoginH" element={<LoginH />} />
+            <Route path="/prueba" element={<Prueba />} />
             {/* <Route path="/contactUs" element={<ContactUs />} />
             <Route path="/news" element={<News />} />
             <Route path="/register" element={<Register />} />
