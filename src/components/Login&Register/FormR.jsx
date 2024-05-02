@@ -15,28 +15,28 @@ export default function FormR() {
         <div>
           <form >
 
-            <div className=' flex flex-row items-center justify-center  mt-1'>
+            <div className=' flex flex-row items-center justify-center  mt-2'>
               <label htmlFor="" className='text-lg font-medium pr-3 text-white'>
                 Nombre
               </label>
               <input type="text" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu Nombre'  />
             </div>
 
-            <div className=' flex flex-row items-center justify-center  mt-1'>
+            <div className=' flex flex-row items-center justify-center  mt-2'>
               <label htmlFor="" className='text-lg font-medium pr-3 text-white'>
                 Apellido
               </label>
               <input type="text" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu cc'  />
             </div>
 
-            <div className=' flex flex-row items-center justify-center  mt-1'>
+            <div className=' flex flex-row items-center justify-center  mt-2'>
               <label htmlFor="" className='text-lg font-medium pr-3 text-white'>
                 Telefono
               </label>
               <input type="text" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu telefono' />
             </div>
 
-            <div className=' flex flex-row items-center justify-center  mt-1'>
+            <div className=' flex flex-row items-center justify-center  mt-2'>
               <label htmlFor="" className='text-lg font-medium pr-3 text-white'>
                 Email
               </label>
@@ -45,7 +45,7 @@ export default function FormR() {
 
             
 
-            <div className=' flex flex-row items-center justify-center  mt-1'>
+            <div className=' flex flex-row items-center justify-center  mt-2'>
               <label htmlFor="" className='text-lg font-medium pr-3 text-white'>
                 Contraseña
               </label>

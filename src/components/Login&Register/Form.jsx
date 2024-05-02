@@ -29,7 +29,7 @@ export default function Form() {
               <input type="email" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu correo' />
             </div>
 
-            <div>
+            <div className='mt-4'>
               <label htmlFor="" className='text-lg font-medium text-white'>
                 Contraseña
               </label>
