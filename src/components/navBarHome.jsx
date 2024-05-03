@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { FaArrowRight, FaBars } from 'react-icons/fa'
-// import Logo from './assets/Logo.png'
+
 import { SiCurseforge } from "react-icons/si";
 
 const navigation = [

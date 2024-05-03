@@ -6,13 +6,13 @@ import News from "./components/News"
 import Login from "./components/Login"
 import Register from "./components/Register"
 import LoginH from "./components/loginUI/loginHome"
+import Curso from "./components/loginUI/Curso"
 import Prueba from "./components/loginUI/prueba"
 
-
 // https://github.com/fireclint/data-finance-react-tailwind/blob/main/src/components/Analytics.jsx
-// https://www.youtube.com/watch?v=hYv6BM2fWd8
-// https://www.youtube.com/watch?v=MvNyJohJdSc
+
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
 
 export default function App() {
   // const listItems = [
@@ -48,6 +48,7 @@ export default function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/LoginH" element={<LoginH />} />
+            <Route path="/contenido" element={<Curso />} /> {/*Cambiar nombre*/}
             <Route path="/prueba" element={<Prueba />} />
             {/* <Route path="/contactUs" element={<ContactUs />} />
             <Route path="/news" element={<News />} />

@@ -1,29 +1,17 @@
 import React from 'react'
-import SideBarNavigation from '../sideBar/sideBarNavigation'
+
+import { useState } from "react"
 import { SiCurseforge } from "react-icons/si";
-import SideBar from '../sideBar/sideBar';
-import { useState, useEffect } from 'react';
+import SideBarNavigation from '../sideBar/sideBar';
 
 
-export default function Prueba() {
+export default function Curso() {
     const [youtubeID] = useState('yoeV4Ex8C8U')
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 640);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
     return (
-        <div className='w-full h-screen relative overflow-x-hidden'>
-            <nav className="bg-nav h-[80px] w-screen mb-2">
+
+        <div className='w-full h-screen'>
+            <nav className="bg-nav h-[80px] w-full mb-2">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <SiCurseforge className=" text-home w-16 h-16" />
@@ -33,7 +21,7 @@ export default function Prueba() {
 
             </nav>
             <div className='h-screen  object-cover flex items-center text-white'>
-                {isMobile ? <div></div> : <SideBar />}
+                <SideBarNavigation />
                 <div className="flex flex-col flex-1 ml-3 mr-3 mt-3  w-[25rem] items-center relative overflow-x-auto">
                     {/*Description */}
                     <div className='mb-10 bg-white  max-w-full w-[800px] h-[15rem] rounded-3xl   overflow-y-auto '>
@@ -73,13 +61,9 @@ export default function Prueba() {
                 </div>
 
             </div>
-            <div className='container sm:hidden'>
-                <footer className='flex object-cover   absolute  -bottom-15 '>
 
-                    <SideBarNavigation />
 
-                </footer>
-            </div>
         </div>
+
     )
 }
