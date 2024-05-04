@@ -8,8 +8,8 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 
 
-export default function Prueba() {
-    const [youtubeID] = useState('yoeV4Ex8C8U')
+export default function ActivityView() {
+    
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
     useEffect(() => {
@@ -41,35 +41,29 @@ export default function Prueba() {
                     {/*Description */}
                     <div className='mb-10 bg-white  max-w-full w-[800px] h-[15rem] rounded-3xl   overflow-y-auto '>
                         <div className='p-1 mt-1 flex flex-1 flex-row justify-around'>
-                            <div  className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center">
-                                <FaArrowAltCircleLeft/>
+                            <div className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center">
+                                <FaArrowAltCircleLeft />
                             </div>
                             <h1 className='text-home text-xl   p-2'>
-                                MODULO X
+                                Actividad
                             </h1>
-                            <div  className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center">
-                                <FaArrowAltCircleRight/>
+                            <div className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center">
+                                <FaArrowAltCircleRight />
                             </div>
                         </div>
                         <div className="mx-auto my-1 h-[0.2rem] max-w-full w-[100%] bg-home " />
                         <p className='text-home text-lg w-full flex p-3 '>
-                            En este módulo, los participantes se sumergirán en el mundo de las
-                            bases de datos, aprendiendo los conceptos esenciales que sustentan el
-                            almacenamiento y la gestión de información. Desde la comprensión de
-                            modelos de datos hasta la implementación de consultas SQL
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Autem omnis ut impedit quam cumque numquam voluptas aliquam
+                            mollitia laborum fuga tenetur eum reprehenderit laboriosam officiis,
+                            beatae incidunt ratione optio esse!
                         </p>
                     </div>
                     {/*end Description */}
 
                     {/**/}
                     {/* <YoutubeEmbed embedId="yoeV4Ex8C8U" /> */}
-                    <iframe className='sm:w-[200px] sm:h-[200px] md:w-[700px] md:h-[300px]'
-                        title='Youtube player'
-                        // width="800"
-                        // height="400"
-                        sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
-                        src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}>
-                    </iframe>
+
 
 
 

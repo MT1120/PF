@@ -1,17 +1,17 @@
 import { useState } from "react"
 
 
-export default function DragD({listItems, draggedItems, onDrop}) {
+export default function DragD({ listItems, draggedItems, onDrop }) {
 
-    
 
-    const [ list, setList] = useState(listItems)
+
+    const [list, setList] = useState(listItems)
 
     const [isDragging, setIsDragging] = useState(false)
-    
 
 
-    const [draggedList, setDraggedList] = useState(draggedItems  || []);
+
+    const [draggedList, setDraggedList] = useState(draggedItems || []);
 
     const handleDragOver = (event) => {
         event.preventDefault();
@@ -19,22 +19,39 @@ export default function DragD({listItems, draggedItems, onDrop}) {
     }
 
     const handleDragStart = (event) => {
-        event.dataTransfer.setData("id" , event.currentTarget.id)
+        event.dataTransfer.setData("id", event.currentTarget.id)
 
     }
 
+    // const handleDrop = (event) => {
+    //     event.preventDefault();
+    //     const id = event.dataTransfer.getData("id");
+    //     const item = list.find(x => x.id === id);
+    //     if (item){
+    //         setDraggedList([...draggedList, item])
+    //         setIsDragging(false)
+
+    //         const filteredList = list.filter(x => x.id !== id);
+    //         setList(filteredList)
+
+    //         // onDrop && onDrop(item)
+    //     }
+    // }
+
     const handleDrop = (event) => {
         event.preventDefault();
+        // If there's already an item being dragged, do nothing
+        if (draggedList.length > 0) {
+            return;
+        }
         const id = event.dataTransfer.getData("id");
         const item = list.find(x => x.id === id);
-        if (item){
-            setDraggedList([...draggedList, item])
-            setIsDragging(false)
+        if (item) {
+            setDraggedList([item]);
+            setIsDragging(false);
 
             const filteredList = list.filter(x => x.id !== id);
-            setList(filteredList)
-
-            onDrop && onDrop(item)
+            setList(filteredList);
         }
     }
 
@@ -48,16 +65,16 @@ export default function DragD({listItems, draggedItems, onDrop}) {
                 <ul className="list-none p-0 m-0 bg-indigo-200 rounded-lg border border-indigo-300 min-h-40">
                     {
                         list.map(item => {
-                            return (<li key = {item.id} 
-                                        id = {item.id} 
-                                        className="bg-white rounded-lg border border-indigo-300 p-4 mx-2 mb-2 first:mt-2 cursor-move"  
-                                        draggable = {true}
-                                        onDragStart={ handleDragStart}
-                                    > 
-                                    
-                                        {item.label}
-                                    
-                                    </li>);
+                            return (<li key={item.id}
+                                id={item.id}
+                                className="bg-white rounded-lg border border-indigo-300 p-4 mx-2 mb-2 first:mt-2 cursor-move"
+                                draggable={true}
+                                onDragStart={handleDragStart}
+                            >
+
+                                {item.label}
+
+                            </li>);
                         })
                     }
                     {/* <li>
@@ -65,27 +82,50 @@ export default function DragD({listItems, draggedItems, onDrop}) {
                     </li> */}
                 </ul>
             </div>
-            <div className={targetClassName} onDragOver={handleDragOver} onDrop = {handleDrop} >
+            <div className={targetClassName} onDragOver={handleDragOver} onDrop={handleDrop} >
                 {/* Target */}
                 <div className=" text-center mb-2">
                     <p>Drag and drop</p>
                 </div>
-                
+
                 <ul className="list-none p-0 m-0 bg-indigo-200 rounded-lg border border-indigo-300 "> {/*min-h-40*/}
                     {
                         draggedList.map(item => {
-                            return (<li key = {item.id} 
-                                        id = {item.id} 
-                                        className="bg-white rounded-lg border border-indigo-300 p-4 mx-2 first:mt-2  mb-2   cursor-move"  
-                                        
-                                    > 
-                                    
-                                        {item.label}
-                                    
-                                    </li>);
+                            return (<li key={item.id}
+                                id={item.id}
+                                className="bg-white rounded-lg border border-indigo-300 p-4 mx-2 first:mt-2  mb-2   cursor-move"
+
+                            >
+
+                                {item.label}
+
+                            </li>);
                         })
                     }
-                    
+
+                </ul>
+            </div>
+            <div className={targetClassName} onDragOver={handleDragOver} onDrop={handleDrop} >
+                {/* Target */}
+                <div className=" text-center mb-2">
+                    <p>Drag and drop</p>
+                </div>
+
+                <ul className="list-none p-0 m-0 bg-indigo-200 rounded-lg border border-indigo-300 "> {/*min-h-40*/}
+                    {
+                        draggedList.map(item => {
+                            return (<li key={item.id}
+                                id={item.id}
+                                className="bg-white rounded-lg border border-indigo-300 p-4 mx-2 first:mt-2  mb-2   cursor-move"
+
+                            >
+
+                                {item.label}
+
+                            </li>);
+                        })
+                    }
+
                 </ul>
             </div>
         </div>

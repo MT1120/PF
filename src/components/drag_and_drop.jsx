@@ -20,14 +20,14 @@ export default function Drag_and_drop() {
       }
     ]
   
-    const draggedItems = [ {id: "item10", label: "Item10"}]
+    const draggedItems = []
     return (
       <>
         <h1 className="text-3xl font-bold underline text-center">
           Hello world!
         </h1>
         <DragD listItems={listItems} draggedItems={draggedItems} onDrop={(item) => {
-          alert(item.label)
+          // alert(item.label)
         }} />
       </>
     )
