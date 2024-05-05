@@ -8,9 +8,9 @@ import { FaArrowRight} from 'react-icons/fa'
 import { SiCurseforge } from "react-icons/si";
 
 const navigation = [
-  { name: 'Sobre nosotros', href: '/aboutUs' },
+  { name: 'Contenido', href: '/' },
 
-  { name: 'Noticias', href: '/news' },
+  { name: 'Contenido', href: '/' },
 
 ]
 
@@ -71,7 +71,7 @@ export default function SideBarNavigation() {
                   href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50"
                 >
-                  Iniciar Sesión
+                  Cerrar Sesión 
                 </a>
               </div>
             </div>
