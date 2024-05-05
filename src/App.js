@@ -56,13 +56,9 @@ export default function App() {
             <Route path="/actividad" element={<ActivityView />} />
             <Route path="/drag" element={<Drag/>} />
             <Route path="/queries" element={<Queries/>} />
-
-            {/* <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login_page/:id" element={<lComponent/>} />
             
-            <Route path="/dashboard" element={<Dashboard />} /> */}
+
+            
 
           </Routes>
 

@@ -1,7 +1,8 @@
 import SideBar from "../sideBar/sideBar"
-
+import { useState, useEffect } from 'react';
 import { ImBooks } from "react-icons/im";
 import { SiCurseforge } from "react-icons/si";
+import MobileFooter from '../sideBar/mobileFooter'
 
 const content = [
     {
@@ -29,26 +30,38 @@ const content = [
 ]
 
 export default function LoginH() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 640);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
-        <div className="w-full h-screen ">
-            <nav className="bg-nav h-[80px]">
+        <div className="w-full h-screen overflow-x-hidden">
+            <nav className="bg-nav h-[80px] w-screen mb-2">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <SiCurseforge className=" text-home w-16 h-16" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DATA FORGE</span>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-home">DATA FORGE</span>
                     </a>
                 </div>
 
             </nav>
             <div className="h-screen  object-cover flex items-center text-white">
-                <SideBar></SideBar>
+                {isMobile ? <div></div> : <SideBar/>}
                 {/* <div className="hidden md:block bg-white w-64 h-64 rounded-full">
 
                 </div> */}
 
                 {/*Content*/}
 
-                <div className="flex flex-col flex-1 ml-3 mr-3 my-5  w-[25rem] items-center relative ">
+                <div className="flex flex-col flex-1 ml-3 mr-3 mt-3  w-[25rem] items-center relative overflow-x-auto ">
 
 
                     {
@@ -88,6 +101,13 @@ export default function LoginH() {
 
 
                 </div>
+            </div>
+            <div className='container sm:hidden'>
+                <footer className='flex object-cover   absolute  -bottom-15 '>
+
+                    <MobileFooter />
+
+                </footer>
             </div>
 
         </div>
