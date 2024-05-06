@@ -1,13 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // import { useState } from 'react'
 // import { useNavigate } from 'react-router-dom'
 
 export default function Form() {
 
-
-
+      
+  const navigate = useNavigate();
+  const navigateToLoginH = () => {
+    // 👇️ Navigate to /contacts
+    navigate('/LoginH');
+  };
 
 
   return (
@@ -37,8 +42,11 @@ export default function Form() {
             </div>
 
             <div className='mt-8 flex flex-col gap-y-4'>
-              <button className='active:scale-[.98] active:duration-75 hover:scale-[1.2] ease-in-out transition-all p-2 rounded-xl bg-sky-400 text-white  text-lg font-bold ' type="submit">
-                Ingresar
+              <button className='active:scale-[.98] active:duration-75 hover:scale-[1.2] ease-in-out transition-all p-2 rounded-xl bg-sky-400 text-white  text-lg font-bold ' type="submit" onClick={navigateToLoginH}>
+                
+                  
+                  Ingresar
+                
               </button>
             </div>
           </form>

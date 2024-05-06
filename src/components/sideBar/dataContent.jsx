@@ -10,34 +10,40 @@ export const data = [
     {
         id:1,
         icon: <PiBookmarksFill/>,
-        text: "XXX"
+        text: "Actividad",
+        link: "/actividad"
     },
     {
         id:2,
         icon: <PiBookmarksFill/>,
-        text: "XXX"
+        text: "Drag and Drop",
+        link: "/drag"
     },
     {
         id:3,
         icon: <PiBookmarksFill/>,
-        text: "XXX"
+        text: "Queries",
+        link: "/queries"
     },
     {
         id:4,
         icon: <PiBookmarksFill/>,
-        text: "XXX"
+        text: "XXX",
+        link: "/LoginH"
     },
     {
         id:5,
         icon: <PiBookmarksFill/>,
-        text: "XXX"
+        text: "Home",
+        link: "/LoginH"
     },
     
     
     {
         id:6,
         icon: <FiLogOut/>,
-        text: "XXX"
+        text: "Cerrar Sesión",
+        link: "/"
     }
 
 ]

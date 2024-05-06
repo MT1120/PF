@@ -1,10 +1,14 @@
 import React from 'react'
 // import { useState } from 'react'
 // import { useNavigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 
 export default function FormR() {
-
+  const navigate = useNavigate();
+  const navigateToLogin = () => {
+    // 👇️ Navigate to /contacts
+    navigate('/login');
+  };
 
   return (
     <div className='z-10'>
@@ -53,7 +57,7 @@ export default function FormR() {
             </div>
 
             <div className='mt-8 flex flex-col gap-y-4'>
-              <button className='active:scale-[.98] active:duration-75 hover:scale-[1.2] ease-in-out transition-all p-2 rounded-xl bg-sky-400 text-white  text-lg font-bold '  type="submit">
+              <button className='active:scale-[.98] active:duration-75 hover:scale-[1.2] ease-in-out transition-all p-2 rounded-xl bg-sky-400 text-white  text-lg font-bold '  type="submit" onClick={navigateToLogin}>
                 Registrar
               </button>
             </div>

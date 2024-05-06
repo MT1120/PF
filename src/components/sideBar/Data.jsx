@@ -12,34 +12,40 @@ export const data = [
     {
         id:1,
         icon: <RxDashboard/>,
-        text: "XXX"
+        text: "XXX",
+        link: "/LoginH"
     },
     {
         id:2,
         icon: <MdInsights/>,
-        text: "XXX"
+        text: "XXX",
+        link: "/LoginH"
     },
     {
         id:3,
         icon: <RiCoupon2Line/>,
-        text: "XXX"
+        text: "XXX",
+        link: "/LoginH"
     },
     {
         id:4,
         icon: <FiUser/>,
-        text: "XXX"
+        text: "XXX",
+        link: "/LoginH"
     },
     {
         id:5,
         icon: <AiOutlineMessage/>,
-        text: "XXX"
+        text: "XXX",
+        link: "/LoginH"
     },
     
     
     {
         id:6,
         icon: <FiLogOut/>,
-        text: "XXX"
+        text: "Cerrar Sesión",
+        link: "/"
     }
 
 ]
