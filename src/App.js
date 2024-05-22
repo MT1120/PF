@@ -12,13 +12,17 @@ import ActivityView from "./components/loginUI/activityView"
 import Drag from "./components/loginUI/drag_and_drop"
 import Queries from "./components/loginUI/Queries"
 import MultipleChoiceQuestion from "./components/loginUI/mcq"
-
 // https://github.com/fireclint/data-finance-react-tailwind/blob/main/src/components/Analytics.jsx
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Logout from "./components/logout"
+import { ProtectedRoute } from "./components/protectedRoute/ProtectedRoute"
 
+import { useState } from "react";
 
 export default function App() {
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
     <>
       {/* <Home/> */}
@@ -28,15 +32,34 @@ export default function App() {
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/news" element={<News />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login setIsLogin={setIsLogin} isLogin={isLogin} />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/LoginH" element={<LoginH />} />
-          <Route path="/contenido" element={<Curso />} /> {/*Cambiar nombre*/}
-          <Route path="/prueba" element={<Prueba />} />
-          <Route path="/actividad" element={<ActivityView />} />
-          <Route path="/drag" element={<Drag />} />
-          <Route path="/queries" element={<Queries />} />
-          <Route path="/mcq" element={<MultipleChoiceQuestion />} />
+          <Route path="/loginH" element={
+            <ProtectedRoute isLogin={isLogin}>
+              <LoginH />
+            </ProtectedRoute>
+          } />
+          <Route path="/contenido" element={
+            <ProtectedRoute isLogin={isLogin}>
+              <Curso />
+            </ProtectedRoute>} /> {/*Cambiar nombre*/}
+          <Route path="/prueba" element={<ProtectedRoute isLogin={isLogin}>
+            <Prueba />
+          </ProtectedRoute>} />
+          <Route path="/actividad" element={<ProtectedRoute isLogin={isLogin}>
+            <ActivityView />
+          </ProtectedRoute>} />
+          <Route path="/drag" element={<ProtectedRoute isLogin={isLogin}>
+            <Drag />
+          </ProtectedRoute>} />
+          <Route path="/queries" element={<ProtectedRoute isLogin={isLogin}>
+            <Queries />
+          </ProtectedRoute>} />
+          <Route path="/mcq" element={<ProtectedRoute isLogin={isLogin}>
+            <MultipleChoiceQuestion />
+          </ProtectedRoute>} />
+          <Route path="*" element={<Home />} />
+          <Route path="/logout" element={<Logout setIsLogin={setIsLogin} />} />
         </Routes>
       </Router>
     </>

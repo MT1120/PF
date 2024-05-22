@@ -43,7 +43,7 @@ export const data = [
         id:6,
         icon: <FiLogOut/>,
         text: "Cerrar Sesión",
-        link: "/"
+        link: "/logout"
     }
 
 ]

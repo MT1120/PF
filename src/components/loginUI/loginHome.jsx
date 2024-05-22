@@ -5,6 +5,7 @@ import { SiCurseforge } from "react-icons/si";
 import MobileFooter from '../sideBar/mobileFooter'
 import { useNavigate } from 'react-router-dom'
 
+
 const content = [
     {
         id: 1,
@@ -32,8 +33,6 @@ const content = [
 
 
 export default function LoginH() {
-
-
     const navigate = useNavigate();
     const navigateToLoginH = () => {
         // 👇️ Navigate to /contacts
@@ -95,7 +94,7 @@ export default function LoginH() {
                                                 <p className="text-[#00008E]">Status: {content.status}</p>
                                             </div>
                                             <div className="flex   justify-center absolute right-3 top-1">
-                                                <button onClick={navigateToLoginH} className=" p-2 mt-10 rounded-lg bg-blue-700 text-white text-lg font-semibold leading-6 hover:bg-gray-600 "> 
+                                                <button onClick={navigateToLoginH} className=" p-2 mt-10 rounded-lg bg-blue-700 text-white text-lg font-semibold leading-6 hover:bg-gray-600 ">
                                                     View
                                                 </button>
                                             </div>

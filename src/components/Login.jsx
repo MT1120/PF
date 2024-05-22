@@ -3,7 +3,7 @@ import Form from './Login&Register/Form'
 import NavBarHome from './navBarHome'
 import { SiCurseforge } from "react-icons/si";
 
-export default function Login() {
+export default function Login({setIsLogin}) {
   return (
 
 
@@ -29,7 +29,7 @@ export default function Login() {
         <div className='flex w-full h-screen pt-5'>
 
             <div className='w-full flex  items-center justify-center lg:w-1/2'>
-                <Form/>
+                <Form setIsLogin={setIsLogin}/>
 
             </div>
             <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center bg-transparent'>
