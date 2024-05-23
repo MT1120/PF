@@ -7,6 +7,8 @@ import Login from "./components/Login"
 import Register from "./components/Register"
 import LoginH from "./components/loginUI/loginHome"
 import Curso from "./components/loginUI/Curso"
+import Curso2 from "./components/loginUI/Curso2"
+import Curso3 from "./components/loginUI/Curso3"
 import Prueba from "./components/loginUI/prueba"
 import ActivityView from "./components/loginUI/activityView"
 import Drag from "./components/loginUI/drag_and_drop"
@@ -39,10 +41,18 @@ export default function App() {
               <LoginH />
             </ProtectedRoute>
           } />
-          <Route path="/contenido" element={
+          <Route path="/contenido/1" element={
             <ProtectedRoute isLogin={isLogin}>
               <Curso />
-            </ProtectedRoute>} /> {/*Cambiar nombre*/}
+            </ProtectedRoute>} />
+            <Route path="/contenido/2" element={
+            <ProtectedRoute isLogin={isLogin}>
+              <Curso2 />
+            </ProtectedRoute>} />
+            <Route path="/contenido/3" element={
+            <ProtectedRoute isLogin={isLogin}>
+              <Curso3 />
+            </ProtectedRoute>} />
           <Route path="/prueba" element={<ProtectedRoute isLogin={isLogin}>
             <Prueba />
           </ProtectedRoute>} />
@@ -52,10 +62,10 @@ export default function App() {
           <Route path="/drag" element={<ProtectedRoute isLogin={isLogin}>
             <Drag />
           </ProtectedRoute>} />
-          <Route path="/queries" element={<ProtectedRoute isLogin={isLogin}>
+          <Route path="/queries/:idmodule" element={<ProtectedRoute isLogin={isLogin}>
             <Queries />
           </ProtectedRoute>} />
-          <Route path="/mcq" element={<ProtectedRoute isLogin={isLogin}>
+          <Route path="/mcq/:idmodule" element={<ProtectedRoute isLogin={isLogin}>
             <MultipleChoiceQuestion />
           </ProtectedRoute>} />
           <Route path="*" element={<Home />} />

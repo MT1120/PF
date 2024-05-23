@@ -30,7 +30,7 @@ export default function FormR() {
               <label htmlFor="" className='text-lg font-medium pr-3 text-white'>
                 Apellido
               </label>
-              <input type="text" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu cc'  />
+              <input type="text" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu Apellido'  />
             </div>
 
             <div className=' flex flex-row items-center justify-center  mt-2'>

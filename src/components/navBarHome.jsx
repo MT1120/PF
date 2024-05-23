@@ -4,7 +4,7 @@ import { Dialog } from '@headlessui/react'
 import { FaArrowRight, FaBars } from 'react-icons/fa'
 
 import { SiCurseforge } from "react-icons/si";
-
+import logo from "./assets/Logo DBAcademy.png"
 const navigation = [
     { name: 'Sobre nosotros', href: '/aboutUs' },
     
@@ -22,9 +22,9 @@ export default function NavBarHome() {
                     <div className="flex lg:flex-1">
                         <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">DATA FORGE</span>
-                            <SiCurseforge
-                                className="h-10 w-10 p-.5 text-sky-950 bg-cyan-500  rounded-full"
-
+                            <img
+                                className="h-12 w-12 p-.5 text-sky-950 bg-cyan-500  rounded-full"
+                                src={logo}
                                 alt=""
                             />
                         </a>

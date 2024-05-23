@@ -40,7 +40,7 @@ export default function Home() {
 
         <div className='flex flex-col'>
           <h1 className='text-5xl text-center text-sky-600  py-5'>
-            DATA FORGE
+            DB Academy
           </h1>
           <p className='flex flex-col justify-center text-center  text-xl text-white max-w-lg'>
             Adéntrate en el mundo de las bases de

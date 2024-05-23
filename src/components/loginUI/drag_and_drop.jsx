@@ -1,6 +1,6 @@
 import React from 'react'
 import MobileFooter from '../sideBar/mobileFooter'
-import { SiCurseforge } from "react-icons/si";
+import logo from '../assets/Logo DBAcademy.png'
 import SideBar from '../sideBar/sideBarNavigation';
 import { useState, useEffect } from 'react';
 
@@ -315,10 +315,10 @@ export default function Drag_and_drop() {
     return (
         <div className='w-full h-screen relative overflow-x-hidden'>
             <nav className="bg-nav h-[80px] w-screen mb-2">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
-                    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <SiCurseforge className=" text-home w-16 h-16" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DATA FORGE</span>
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+                    <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src={logo} className=" text-home w-16 h-16" />
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-home">DB Academy</span>
                     </a>
                 </div>
 

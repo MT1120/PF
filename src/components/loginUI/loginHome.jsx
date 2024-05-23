@@ -1,7 +1,7 @@
 import SideBar from "../sideBar/sideBar"
 import { useState, useEffect } from 'react';
 import { ImBooks } from "react-icons/im";
-import { SiCurseforge } from "react-icons/si";
+import logo from '../assets/Logo DBAcademy.png'
 import MobileFooter from '../sideBar/mobileFooter'
 import { useNavigate } from 'react-router-dom'
 
@@ -9,24 +9,24 @@ import { useNavigate } from 'react-router-dom'
 const content = [
     {
         id: 1,
-        title: "Modulo X",
-        status: "Complete",
+        title: "Introducción a las Bases de Datos",
+        status: "Completed",
         firstIcon: <ImBooks className="text-5xl  left-5" />,
-        link: "/contenido",
+        link: "/contenido/1",
     },
     {
         id: 2,
-        title: "Modulo X",
-        status: "Complete",
+        title: "Fundamentos de SQL",
+        status: "In progress",
         firstIcon: <ImBooks className="text-5xl  left-5" />,
-        link: "/contenido",
+        link: "/contenido/2",
     },
     {
         id: 3,
-        title: "Modulo X",
-        status: "Complete",
+        title: "Diseño y Modelado de Bases de Datos",
+        status: "Not started",
         firstIcon: <ImBooks className="text-5xl  left-5" />,
-        link: "/contenido",
+        link: "/contenido/3",
     }
 
 ]
@@ -54,10 +54,10 @@ export default function LoginH() {
     return (
         <div className="w-full h-screen overflow-x-hidden">
             <nav className="bg-nav h-[80px] w-screen mb-2">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
-                    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <SiCurseforge className=" text-home w-16 h-16" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-home">DATA FORGE</span>
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+                    <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src={logo} className=" text-home w-16 h-auto" />
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-home">DB Academy</span>
                     </a>
                 </div>
 
@@ -83,18 +83,15 @@ export default function LoginH() {
                                             <div className=" text-xl w-full flex justify-center ">
                                                 {content.title}
                                             </div>
-
-
                                         </div>
                                         <div className="mx-auto my-1 h-[0.2rem] max-w-full w-[100%] bg-home ">
-
                                         </div>
                                         <div className="mt-2 max-w-full w-full h-full relative">
                                             <div className="pl-2">
                                                 <p className="text-[#00008E]">Status: {content.status}</p>
                                             </div>
                                             <div className="flex   justify-center absolute right-3 top-1">
-                                                <button onClick={navigateToLoginH} className=" p-2 mt-10 rounded-lg bg-blue-700 text-white text-lg font-semibold leading-6 hover:bg-gray-600 ">
+                                                <button onClick={() => navigate(content.link)} className=" p-2 mt-10 rounded-lg bg-blue-700 text-white text-lg font-semibold leading-6 hover:bg-gray-600 ">
                                                     View
                                                 </button>
                                             </div>

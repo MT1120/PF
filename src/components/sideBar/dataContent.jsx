@@ -1,39 +1,39 @@
 import React from 'react'
 
-
+import { FaCheckSquare, FaArrowsAlt, FaDatabase, FaHome, FaBook} from 'react-icons/fa';
 import {  FiLogOut } from 'react-icons/fi'
-import { PiBookmarksFill } from "react-icons/pi"
+
 // import { BsFolder, BsWallet2 } from 'react-icons/bs'
 
 
 export const data = [
     {
+        id:4,
+        icon: <FaBook/>,
+        text: "Content",
+        link: "/contenido/1"
+    },
+    {
         id:1,
-        icon: <PiBookmarksFill/>,
-        text: "Actividad",
-        link: "/actividad"
+        icon: <FaCheckSquare/>,
+        text: "Multiple Choice Question",
+        link: "/mcq"
     },
     {
         id:2,
-        icon: <PiBookmarksFill/>,
+        icon: <FaArrowsAlt/>,
         text: "Drag and Drop",
         link: "/drag"
     },
     {
         id:3,
-        icon: <PiBookmarksFill/>,
+        icon: <FaDatabase/>,
         text: "Queries",
         link: "/queries"
     },
     {
-        id:4,
-        icon: <PiBookmarksFill/>,
-        text: "XXX",
-        link: "/LoginH"
-    },
-    {
         id:5,
-        icon: <PiBookmarksFill/>,
+        icon: <FaHome/>,
         text: "Home",
         link: "/LoginH"
     },

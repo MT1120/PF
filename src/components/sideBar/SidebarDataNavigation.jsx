@@ -1,12 +1,58 @@
 import React from 'react'
-import {data} from "./dataContent"
+import { FaCheckSquare, FaArrowsAlt, FaDatabase, FaHome, FaBook} from 'react-icons/fa';
+import {  FiLogOut } from 'react-icons/fi'
 import { useNavigate } from 'react-router-dom'
 
-const SidebarData = ({toggle}) => {
-  const navigate = useNavigate();
+
+const SidebarData = ({toggle, moduleId}) => {
+  const navigate = useNavigate();  
   const handleClick = (link) => {
     navigate(link);
   };
+  
+
+  const data = [
+    {
+        id:4,
+        icon: <FaBook/>,
+        text: "Content",
+        link: `/contenido/${moduleId || 1}`
+    },
+    {
+        id:1,
+        icon: <FaCheckSquare/>,
+        text: "Multiple Choice Question",
+        link: `/mcq/${moduleId || 1}`
+    },
+    {
+        id:2,
+        icon: <FaArrowsAlt/>,
+        text: "Drag and Drop",
+        link: "/drag"
+    },
+    {
+        id:3,
+        icon: <FaDatabase/>,
+        text: "Queries",
+        link: `/queries/${moduleId || 1}`
+    },
+    {
+        id:5,
+        icon: <FaHome/>,
+        text: "Home",
+        link: "/LoginH"
+    },
+    
+    
+    {
+        id:6,
+        icon: <FiLogOut/>,
+        text: "Cerrar Sesión",
+        link: "/logout"
+    }
+
+]
+
   return (
     <div className=''>
       {

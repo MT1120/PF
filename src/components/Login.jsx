@@ -2,7 +2,7 @@ import React from 'react'
 import Form from './Login&Register/Form'
 import NavBarHome from './navBarHome'
 import { SiCurseforge } from "react-icons/si";
-
+import logo from './assets/Logo DBAcademy.png'
 export default function Login({setIsLogin}) {
   return (
 
@@ -35,7 +35,7 @@ export default function Login({setIsLogin}) {
             <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center bg-transparent'>
 
                 <div className='flex w-60 h-60 bg-gradient-to-tr from-sky-600 to-cyan-900 rounded-full animate-bounce items-center justify-center'>
-                    <SiCurseforge className=" text-home w-32 h-32" />
+                    <img src={logo} className=" text-home w-50 h-auto" />
                 </div>
 
                 <div className='w-full h-1/2 absolute bottom-0 bg-[#282638] backdrop-blur-lg'>
