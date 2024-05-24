@@ -33,6 +33,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/prueba" element={<Prueba />} />
           <Route path="/news" element={<News />} />
           <Route path="/login" element={<Login setIsLogin={setIsLogin} isLogin={isLogin} />} />
           <Route path="/register" element={<Register />} />
