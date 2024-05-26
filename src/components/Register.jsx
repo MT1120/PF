@@ -35,10 +35,10 @@ export default function Login() {
                 <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center bg-transparent'>
 
                     <div className='flex w-60 h-60 bg-gradient-to-tr from-sky-600 to-cyan-900 rounded-full animate-bounce items-center justify-center'>
-                        <img src={logo} className=" text-home w-50 h-auto" />
+                        <img src={logo} alt='/' className=" text-home w-50 h-auto" />
                     </div>
 
-                    <div className='w-full h-1/2 absolute bottom-0 bg-[#282638] backdrop-blur-lg'>
+                    <div className='w-full h-1/2 absolute bottom-0 bg-white backdrop-blur-lg'>
 
                     </div>
                 </div>

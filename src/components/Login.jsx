@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from './Login&Register/Form'
 import NavBarHome from './navBarHome'
-import { SiCurseforge } from "react-icons/si";
+//import { SiCurseforge } from "react-icons/si";
 import logo from './assets/Logo DBAcademy.png'
 export default function Login({setIsLogin}) {
   return (
@@ -10,9 +10,9 @@ export default function Login({setIsLogin}) {
     <div className=''>
 
         <NavBarHome/>
-        <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="relative -z-50 isolate px-6 pt-14 lg:px-8">
 
-            <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            <div className="absolute inset-x-0 -top-40 -z-50 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 aria-hidden="true">
                     
                 <div
@@ -28,17 +28,17 @@ export default function Login({setIsLogin}) {
 
         <div className='flex w-full h-screen pt-5'>
 
-            <div className='w-full flex  items-center justify-center lg:w-1/2'>
+            <div className='w-full z-50 flex  items-center justify-center lg:w-1/2'>
                 <Form setIsLogin={setIsLogin}/>
 
             </div>
             <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center bg-transparent'>
 
                 <div className='flex w-60 h-60 bg-gradient-to-tr from-sky-600 to-cyan-900 rounded-full animate-bounce items-center justify-center'>
-                    <img src={logo} className=" text-home w-50 h-auto" />
+                    <img src={logo} alt='/' className=" text-home w-50 h-auto" />
                 </div>
 
-                <div className='w-full h-1/2 absolute bottom-0 bg-[#282638] backdrop-blur-lg'>
+                <div className='w-full h-1/2 absolute bottom-0 bg-white backdrop-blur-lg'>
 
                 </div>
             </div>

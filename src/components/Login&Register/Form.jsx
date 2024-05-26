@@ -71,7 +71,7 @@ export default function Form({ setIsLogin }) {
 
   return (
     <div>
-      <h1 className='text-5xl font-semibold text-white'>
+      <h1 className='text-5xl font-semibold text-[#0077B6]'>
         Bienvenidos
       </h1>
       <p className='font-medium text-lg text-sky-600  mt-4'>
@@ -81,17 +81,17 @@ export default function Form({ setIsLogin }) {
         <div>
           <form onSubmit={signInWithEmail}>
             <div>
-              <label htmlFor="" className='text-lg font-medium text-white'>
+              <label htmlFor="" className='text-lg font-medium text-[#0077B6]'>
                 Email
               </label>
-              <input onChange={handleInputEmailChange} id='email' type="email" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='Ingresa tu correo' />
+              <input onChange={handleInputEmailChange} id='email' type="email" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-[#0077B6]' placeholder='Ingresa tu correo' />
             </div>
 
             <div className='mt-4'>
-              <label htmlFor="" className='text-lg font-medium text-white'>
+              <label htmlFor="" className='text-lg font-medium text-[#0077B6]'>
                 Contraseña
               </label>
-              <input id='pass' onChange={handleInputPassChange} type="password" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-white' placeholder='******' />
+              <input id='pass' onChange={handleInputPassChange} type="password" className='w-full border-2 border-sky-600 rounded-xl p-4 mt-1 bg-transparent text-[#0077B6]' placeholder='******' />
             </div>
 
             <div className='mt-8 flex flex-col gap-y-4'>
@@ -110,7 +110,7 @@ export default function Form({ setIsLogin }) {
             </div>
           </form>
           <div className='flex items-center justify-center'>
-            <button className='font-medium text-base text-white  mt-5' >
+            <button className='font-medium text-base text-[#0077B6]  mt-5' >
               <Link to={'/register'}>
                 Eres nuevo ?
               </Link>

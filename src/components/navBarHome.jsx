@@ -17,7 +17,7 @@ export default function NavBarHome() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
         <div className='container'>
-            <header className="absolute inset-x-0 top-0 z-50 bg-nav h-[80px]">
+            <header className="absolute inset-x-0 top-0 z-50  h-[80px] bg-transparent">
                 <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
                         <a href="/" className="-m-1.5 p-1.5">
@@ -57,7 +57,7 @@ export default function NavBarHome() {
                 </nav>
                 <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <div className="fixed inset-0 z-50" />
-                    <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#282638] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <a href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Data Forge</span>
@@ -69,7 +69,7 @@ export default function NavBarHome() {
                             </a>
                             <button
                                 type="button"
-                                className="-m-2.5 rounded-md p-2.5 text-white"
+                                className="-m-2.5 rounded-md p-2.5 text-home"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <span className="sr-only">Close menu</span>
@@ -83,7 +83,7 @@ export default function NavBarHome() {
                                         <a
                                             key={item.name}
                                             href={item.href}
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-home hover:bg-gray-50"
                                         >
                                             {item.name}
                                         </a>
@@ -92,7 +92,7 @@ export default function NavBarHome() {
                                 <div className="py-6">
                                     <a
                                         href="/login"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-home hover:bg-gray-50"
                                     >
                                         Iniciar Sesión
                                     </a>

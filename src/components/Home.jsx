@@ -1,7 +1,7 @@
 import NavBarHome from './navBarHome'
 
 import React from 'react'
-import img from "./assets/front.png"
+import img from "./assets/img.png"
 
 
 
@@ -13,6 +13,8 @@ export default function Home() {
 
 
       {/* <NavBarHome/> */}
+
+
       <NavBarHome />
       <div className="relative isolate px-6 pt-14 lg:px-8">
 
@@ -30,19 +32,13 @@ export default function Home() {
 
       </div>
 
+
       <div className='py-20 mx-auto flex md:flex-row flex-col items-center justify-around'>
-
-        <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
-          <img src={img} alt="/" className='my-4 object-cover object-center rounded' />
-        </div>
-
-
-
         <div className='flex flex-col'>
-          <h1 className='text-5xl text-center text-sky-600  py-5'>
-            DB Academy
+          <h1 className='text-5xl text-center text-home  py-5 lg:text-left'>
+            DB <span className='text-[#90E0EF]'>Academy</span>
           </h1>
-          <p className='flex flex-col justify-center text-center  text-xl text-white max-w-lg'>
+          <p className='flex flex-col justify-center text-center  text-xl text-black max-w-lg lg:text-left'>
             Adéntrate en el mundo de las bases de
             datos desde una perspectiva introductoria pero
             sólidamente fundamentada. Esta herramienta te ayudara a comprender los elementos
@@ -56,15 +52,10 @@ export default function Home() {
           </div>
 
         </div>
-
-
-
+        <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
+          <img src={img} alt="/" className='my-4 object-cover object-center rounded' />
+        </div>
       </div>
-
-
-
-
-
     </div>
   )
 }

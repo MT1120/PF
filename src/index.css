@@ -28,7 +28,7 @@
 
 body {
 
-    background-color: #282638;
+    background-color: white;
     font-family: "Poppins", sans-serif;
 }
 
@@ -37,6 +37,14 @@ body {
 }
 
 .sidebar {
+  @apply flex items-center mt-5 p-3 cursor-pointer rounded-full hover:bg-white hover:text-home transition-all duration-300
+}
+
+.sidebar-container2 {
+  @apply bg-[#03045E] h-[100%]   p-4 border transition-all duration-500 border-solid border-glass relative
+}
+/* #0077B6 */   /* rounded-3xl*/
+.sidebar2 {
   @apply flex items-center mt-5 p-3 cursor-pointer rounded-full hover:bg-white hover:text-home transition-all duration-300
 }
 

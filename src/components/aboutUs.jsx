@@ -29,14 +29,14 @@ const people = [
 export default function AboutUs() {
     return (
 
-        <div className='bg-[#282638]'>
+        <div className='bg-white'>
             <NavBarHome />
 
             <div className="py-24 sm:py-32">
                 <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
                     <div className="max-w-2xl">
                         <h2 className="text-3xl font-bold tracking-tight text-blue-700 sm:text-4xl">Conoce nuestro equipo</h2>
-                        <p className="mt-6 text-lg leading-8 text-white">
+                        <p className="mt-6 text-lg leading-8 text-home">
                             XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                         </p>
                     </div>
@@ -46,7 +46,7 @@ export default function AboutUs() {
                                 <div className="flex items-center gap-x-6">
                                     <img className="h-16 w-16 rounded-full bg-nav" src={person.imageUrl} alt="" />
                                     <div>
-                                        <h3 className="text-base font-semibold leading-7 tracking-tight text-white">{person.name}</h3>
+                                        <h3 className="text-base font-semibold leading-7 tracking-tight text-home">{person.name}</h3>
                                         <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                                     </div>
                                 </div>

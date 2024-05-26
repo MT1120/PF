@@ -1,7 +1,7 @@
 import React from 'react'
 import MobileFooter from '../sideBar/mobileFooter'
 import { SiCurseforge } from "react-icons/si";
-import SideBar from '../sideBar/sideBarNavigation';
+import SideBar from '../sideBar/sideBarNavigation2';
 import { useState, useEffect } from 'react';
 
 import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -99,7 +99,7 @@ export default function DragD() {
             return;
         }
 
-        if ( destList.length === 1  &  source === "sourceList") {
+        if (destList.length === 1 & source === "sourceList") {
             destList.splice(0, draggedList.length);
             const item = sourceList.find(x => x.id === id);
             if (item) {
@@ -107,7 +107,7 @@ export default function DragD() {
                 //setDraggedList1(setDraggedList1.filter(x => x.id !== id));
             }
         }
-        if ( destList.length === 1  &  source === "targetList") {
+        if (destList.length === 1 & source === "targetList") {
             destList.splice(0, draggedList.length);
             const item = sourceList.find(x => x.id === id);
             if (item) {
@@ -238,44 +238,55 @@ export default function DragD() {
 
     return (
         <div className="w-full h-screen relative overflow-x-hidden">
-            <nav className="bg-nav h-[80px] w-screen mb-2">
+            {/* <nav className="bg-nav h-[80px] w-screen mb-2">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <SiCurseforge className=" text-home w-16 h-16" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DATA FORGE</span>
                     </a>
                 </div>
-            </nav>
-            <div className='h-screen  object-cover flex items-center text-white '>
+            </nav> */}
+            <div className='h-screen  object-cover flex items-center text-white relative'>
                 {isMobile ? <div></div> : <SideBar />}
-                <div className="flex flex-col flex-1 ml-3 mr-3 mt-3  w-[25rem] items-center relative overflow-x-hidden ">
-                    <div className='mb-3 mt-3 bg-white  max-w-full w-[800px] h-[95svh] rounded-3xl   overflow-y-auto overflow-x-hidden'>
-                        <div className='p-1 mt-1 flex flex-1 flex-row justify-around'>
-                            <div className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center overflow-x-hidden">
-                                <FaArrowAltCircleLeft />
-                            </div>
-                            <h1 className='text-home text-xl   p-2'>
-                                Drag and Drop
-                            </h1>
-                            <div className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center">
-                                <FaArrowAltCircleRight />
-                            </div>
+
+                <div className='w-screen h-screen flex flex-col items-center bg-slate-200'>
+                    <nav className="bg-white h-[80px] w-full  flex-shrink">
+                        <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+                            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                                <SiCurseforge className=" text-home w-16 h-16" />
+                                <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DB ACADEMY</span>
+                            </a>
                         </div>
-                        <div className="mx-auto my-1 h-[0.2rem] max-w-full w-[100%] bg-home " />
-                        {renderList("targetList", draggedList, setDraggedList, draggedList1, setDraggedList1, draggedList2, setDraggedList2)}
-                        {renderList("targetList", draggedList3, setDraggedList3, draggedList4, setDraggedList4, draggedList5, setDraggedList5)}
-                        {renderList("targetList", draggedList6, setDraggedList6, draggedList7, setDraggedList7, draggedList8, setDraggedList8)}
-                        {/* draggedList, "targetList", draggedList, setDraggedList, draggedList1, setDraggedList1, draggedList2, setDraggedList2 */}
-                        <div className=' my-4 text-home text-xl text-center'>
-                            <p>
-                                Selecciona el item adecuado
-                            </p>
+                    </nav>
+                    <div className="flex flex-col flex-1 ml-3 mr-3   w-full items-center relative overflow-x-hidden  ">
+                        <div className='mb-3 mt-3 max-w-full w-[800px] h-[95svh] rounded-3xl   overflow-y-auto overflow-x-hidden bg-white shadow-2xl'>
+                            <div className='p-1 mt-1 flex flex-1 flex-row justify-around'>
+                                <div className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center overflow-x-hidden">
+                                    <FaArrowAltCircleLeft />
+                                </div>
+                                <h1 className='text-home text-xl   p-2'>
+                                    Drag and Drop
+                                </h1>
+                                <div className="p-2 flex rounded-full bg-blue-700 text-white text-lg font-semibold cursor-pointer hover:bg-gray-600 items-center">
+                                    <FaArrowAltCircleRight />
+                                </div>
+                            </div>
+                            <div className="mx-auto my-1 h-[0.2rem] max-w-full w-[100%] bg-home " />
+                            {renderList("targetList", draggedList, setDraggedList, draggedList1, setDraggedList1, draggedList2, setDraggedList2)}
+                            {renderList("targetList", draggedList3, setDraggedList3, draggedList4, setDraggedList4, draggedList5, setDraggedList5)}
+                            {renderList("targetList", draggedList6, setDraggedList6, draggedList7, setDraggedList7, draggedList8, setDraggedList8)}
+                            {/* draggedList, "targetList", draggedList, setDraggedList, draggedList1, setDraggedList1, draggedList2, setDraggedList2 */}
+                            <div className=' my-4 text-home text-xl text-center'>
+                                <p>
+                                    Selecciona el item adecuado
+                                </p>
+                            </div>
+
+
+                            {renderList2(list, "sourceList")}
+                            {renderList2(list, "sourceList")}
+
                         </div>
-
-
-                        {renderList2(list, "sourceList")}
-                        {renderList2(list, "sourceList")}
-
                     </div>
                 </div>
             </div>
