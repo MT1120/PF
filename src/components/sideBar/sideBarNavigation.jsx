@@ -11,7 +11,7 @@ export default function SideBarNavigation({moduleId}) {
         <div className={`${toggle ? "w-[5rem]" : "w-[20rem]"} sidebar-container`}>
             <UserProfile toggle = {toggle}/>
             <SidebarData toggle = {toggle} moduleId={moduleId}/>
-            <div className="absolute top-[7rem] flex justify-center items-center -left-5 w-9 h-9 bg-glass rounded-full cursor-pointer" 
+            <div className="absolute top-[7rem] flex justify-center items-center -left-5 w-9 h-9 bg-[#00B4D8] rounded-full cursor-pointer" 
             onClick={() => {
                 setToggle(!toggle);
             }}>

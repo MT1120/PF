@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar-container {
-  @apply bg-glass h-[96%]  rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass relative
+  @apply bg-[#03045E] h-[96%]  rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass relative
 }
 
 .sidebar {

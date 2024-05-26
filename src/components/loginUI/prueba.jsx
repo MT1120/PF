@@ -249,7 +249,7 @@ export default function DragD() {
             <div className='h-screen  object-cover flex items-center text-white relative'>
                 {isMobile ? <div></div> : <SideBar />}
 
-                <div className='w-screen h-screen flex flex-col items-center bg-slate-200'>
+                <div className='w-screen h-screen flex flex-col items-center bg-slate-300'>
                     <nav className="bg-white h-[80px] w-full  flex-shrink">
                         <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">

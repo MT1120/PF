@@ -238,11 +238,11 @@ export default function DragD() {
     );
 
     return (
-        <div className="w-full h-screen relative overflow-x-hidden">
-            <nav className="bg-nav h-[80px] w-screen mb-2">
+        <div className="bg-slate-300 w-full h-screen relative overflow-x-hidden">
+            <nav className="bg-white h-[80px] w-screen mb-2 shadow-xl">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src={logo} className=" text-home w-16 h-16" />
+                        <img src={logo} alt='/' className=" text-home w-16 h-16" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DB Academy</span>
                     </a>
                 </div>

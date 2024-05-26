@@ -25,8 +25,8 @@ export default function ActivityView() {
     }, []);
 
     return (
-        <div className='w-full h-screen relative overflow-x-hidden'>
-            <nav className="bg-nav h-[80px] w-screen mb-2">
+        <div className='bg-slate-300 w-full h-screen relative overflow-x-hidden'>
+            <nav className="bg-white h-[80px] w-screen mb-2 shadow-xl">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <SiCurseforge className=" text-home w-16 h-16" />
