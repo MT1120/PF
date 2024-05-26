@@ -18,12 +18,12 @@ export default function Queries() {
     const [areEqual, setAreEqual] = useState(false);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8002/api/code/3/')
+        fetch(`http://localhost:8002/api/code/?lesson=${idmodule}`)
             .then(response => response.json())
             .then(data => {
-                setStatement(data.statement);
-                setCode(data.starter_code.replace(/\\r\\n/g, '\n'));
-                setSolution(JSON.parse(data.solution));
+                setStatement(data[0].statement);
+                setCode(data[0].starter_code.replace(/\\r\\n/g, '\n'));
+                setSolution(JSON.parse(data[0].solution));
 
             })
             .catch(error => console.error('Error al cargar la pregunta:', error));

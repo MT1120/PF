@@ -34,6 +34,7 @@ const content = [
 
 export default function LoginH() {
     const navigate = useNavigate();
+    const [lessons, setLessons] = useState([{}]);
     const navigateToLoginH = () => {
         // 👇️ Navigate to /contacts
         navigate('/contenido');
@@ -41,6 +42,13 @@ export default function LoginH() {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
     useEffect(() => {
+        fetch(`http://127.0.0.1:8002/api/lesson/`)
+            .then(response => response.json())
+            .then(data => {
+                setLessons(data);
+            })
+            .catch(error => console.error('Error al cargar las lecciones:', error));
+
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 640);
         };
@@ -64,34 +72,30 @@ export default function LoginH() {
             </nav>
             <div className="h-screen  object-cover flex items-center text-white">
                 {isMobile ? <div></div> : <SideBar />}
-                {/* <div className="hidden md:block bg-white w-64 h-64 rounded-full">
-
-                </div> */}
-
                 {/*Content*/}
 
                 <div className="flex flex-col flex-1 ml-3 mr-3 mt-3  w-[25rem] items-center relative overflow-x-auto ">
 
 
                     {
-                        content.map(content => {
+                        lessons.map(lesson => {
                             return (
                                 <div className=" my-3 bg-white  max-w-full w-[1000px] h-[10rem] rounded-3xl ">
                                     <div className="flex flex-col ">
                                         <div className=" text-[#00008E]  ml-3 flex  items-center ">
-                                            {content.firstIcon}
+                                            <ImBooks className="text-5xl  left-5" />
                                             <div className=" text-xl w-full flex justify-center ">
-                                                {content.title}
+                                                {lesson.title}
                                             </div>
                                         </div>
                                         <div className="mx-auto my-1 h-[0.2rem] max-w-full w-[100%] bg-home ">
                                         </div>
                                         <div className="mt-2 max-w-full w-full h-full relative">
                                             <div className="pl-2">
-                                                <p className="text-[#00008E]">Status: {content.status}</p>
+                                                <p className="text-[#00008E]">Estado: En progreso</p>
                                             </div>
                                             <div className="flex   justify-center absolute right-3 top-1">
-                                                <button onClick={() => navigate(content.link)} className=" p-2 mt-10 rounded-lg bg-blue-700 text-white text-lg font-semibold leading-6 hover:bg-gray-600 ">
+                                                <button onClick={() => navigate(`/contenido/${lesson.id}`)} className=" p-2 mt-10 rounded-lg bg-blue-700 text-white text-lg font-semibold leading-6 hover:bg-gray-600 ">
                                                     View
                                                 </button>
                                             </div>

@@ -1,15 +1,16 @@
 import React from 'react'
 import MobileFooter from '../sideBar/mobileFooter'
-import { SiCurseforge } from "react-icons/si";
+import logo from '../assets/Logo DBAcademy.png'
 import SideBar from '../sideBar/sideBarNavigation';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 
 
 export default function DragD() {
-
+    const { idmodule } = useParams();
     const draggedItems = []
     const listItems = [
         {
@@ -241,13 +242,13 @@ export default function DragD() {
             <nav className="bg-nav h-[80px] w-screen mb-2">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
                     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <SiCurseforge className=" text-home w-16 h-16" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DATA FORGE</span>
+                        <img src={logo} className=" text-home w-16 h-16" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-home">DB Academy</span>
                     </a>
                 </div>
             </nav>
             <div className='h-screen  object-cover flex items-center text-white '>
-                {isMobile ? <div></div> : <SideBar />}
+                {isMobile ? <div></div> : <SideBar moduleId={idmodule}/>}
                 <div className="flex flex-col flex-1 ml-3 mr-3 mt-3  w-[25rem] items-center relative overflow-x-hidden ">
                     <div className='mb-3 mt-3 bg-white  max-w-full w-[800px] h-[95svh] rounded-3xl   overflow-y-auto overflow-x-hidden'>
                         <div className='p-1 mt-1 flex flex-1 flex-row justify-around'>

@@ -5,6 +5,7 @@ import SideBar from '../sideBar/sideBarNavigation';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { useParams } from 'react-router-dom';
+import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 
 function MultipleChoiceQuestion() {
     const { idmodule } = useParams();
@@ -12,28 +13,15 @@ function MultipleChoiceQuestion() {
     const [selectedOption, setSelectedOption] = useState('');
     const [feedback, setFeedback] = useState('');
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
-
-    const spinnerStyle = {
-        border: '8px solid rgba(0, 0, 0, 0.1)',
-        borderLeftColor: '#4F46E5', // Color del borde izquierdo
-        borderRadius: '50%',
-        width: '64px',
-        height: '64px',
-        animation: 'spin 1s linear infinite',
-    };
-
-    const spinKeyframes = `
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    `;
+    const [showModal, setShowModal] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8002/api/mcq/${idmodule === '1' ? '3' : idmodule === '2' ? '4' : idmodule==='3'?'5':''}/`)
+        console.log(idmodule);
+        fetch(`http://127.0.0.1:8002/api/mcq/?lesson=${idmodule}`)
             .then(response => response.json())
             .then(data => {
-            setQuestionData(data);
+                setQuestionData(data[0]);
             })
             .catch(error => console.error('Error al cargar la pregunta:', error));
         const handleResize = () => {
@@ -51,22 +39,27 @@ function MultipleChoiceQuestion() {
     };
 
     const checkAnswer = () => {
+        let content;
         if (selectedOption === questionData.correct_answer) {
-            setFeedback('Respuesta correcta');
+            content = {
+                message: 'Respuesta correcta',
+                icon: <FiCheckCircle className="text-green-600 text-4xl" />,
+                color: 'text-green-600'
+            };
         } else {
-            setFeedback('Respuesta incorrecta');
+            content = {
+                message: 'Respuesta incorrecta',
+                icon: <FiXCircle className="text-red-600 text-4xl" />,
+                color: 'text-red-600'
+            };
         }
+        setModalContent(content);
+        setShowModal(true);
     };
 
-    if (!questionData) {
-        return (
-            <div className="flex flex-col items-center justify-center h-screen" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-                <style>{spinKeyframes}</style>
-                <div style={spinnerStyle}></div>
-                <p style={{ marginTop: '16px', fontSize: '18px', color: '#4A5568' }}>Cargando pregunta...</p>
-            </div>
-        );
-    }
+    const closeModal = () => {
+        setShowModal(false);
+    };
 
     return (
         <div className='w-full h-screen relative overflow-x-hidden'>
@@ -95,9 +88,9 @@ function MultipleChoiceQuestion() {
                         <hr className="mx-auto w-full h-[2px] bg-home" />
                         <div className="flex flex-col mt-8 mx-4">
                             <div className="text-black">
-                                <h2 className="text-xl font-semibold mb-4">{questionData.question}</h2>
+                                <h2 className="text-xl font-semibold mb-4">{questionData ? questionData.question : ''}</h2>
                                 <div className="flex flex-col space-y-2">
-                                    {JSON.parse(questionData.choices).map((option, index) => (
+                                    {questionData && questionData.choices ? JSON.parse(questionData.choices).map((option, index) => (
                                         <div key={index} className="flex items-center">
                                             <input
                                                 type="radio"
@@ -108,7 +101,7 @@ function MultipleChoiceQuestion() {
                                             />
                                             <label>{option}</label>
                                         </div>
-                                    ))}
+                                    )) : ''}
                                 </div>
                                 <button
                                     onClick={checkAnswer}
@@ -116,7 +109,23 @@ function MultipleChoiceQuestion() {
                                 >
                                     Check Answer
                                 </button>
-                                {feedback && <p className={feedback === 'Respuesta correcta' ? 'mt-4 text-green-600' : 'mt-4 text-red-600'}>{feedback}</p>}
+                                {/* Modal */}
+                                {showModal && (
+                                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                                        <div className="bg-white rounded-lg p-6 w-80 text-center">
+                                            <div className="mb-4">
+                                                {modalContent.icon}
+                                            </div>
+                                            <p className={`text-2xl ${modalContent.color}`}>{modalContent.message}</p>
+                                            <button
+                                                onClick={closeModal}
+                                                className="mt-4 px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-colors duration-300"
+                                            >
+                                                Cerrar
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

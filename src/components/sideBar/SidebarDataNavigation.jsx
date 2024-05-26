@@ -28,7 +28,7 @@ const SidebarData = ({toggle, moduleId}) => {
         id:2,
         icon: <FaArrowsAlt/>,
         text: "Drag and Drop",
-        link: "/drag"
+        link: `/drag/${moduleId || 1}`
     },
     {
         id:3,
