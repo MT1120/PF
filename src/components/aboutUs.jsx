@@ -7,19 +7,19 @@ import Img1 from './assets/Logo.png'
 const people = [
     {
         name: 'Mateo Anaya',
-        role: 'XXXXXX',
+        role: 'Estudiante de Ingeniería de sistemas y computación en la Universidad del Norte',
         imageUrl:
             Img1,
     },
     {
         name: 'Mateo Aristizabal',
-        role: 'XXXXXX',
+        role: 'Estudiante de Ingeniería de sistemas y computación en la Universidad del Norte',
         imageUrl:
             Img1,
     },
     {
         name: 'Miguel Altamar',
-        role: 'XXXXXX',
+        role: 'Estudiante de Ingeniería de sistemas y computación en la Universidad del Norte',
         imageUrl:
             Img1,
     }
@@ -37,7 +37,7 @@ export default function AboutUs() {
                     <div className="max-w-2xl">
                         <h2 className="text-3xl font-bold tracking-tight text-blue-700 sm:text-4xl">Conoce nuestro equipo</h2>
                         <p className="mt-6 text-lg leading-8 text-home">
-                            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                            
                         </p>
                     </div>
                     <ul className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">

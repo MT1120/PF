@@ -63,7 +63,7 @@ export default function LoginH() {
         <div className="bg-slate-300 w-full h-screen overflow-x-hidden sticky">
             <nav className="bg-white h-[80px] w-screen mb-2 shadow-xl">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
-                    <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <a href="/LoginH" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src={logo} alt="/" className=" text-home w-16 h-auto" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-home">DB Academy</span>
                     </a>
