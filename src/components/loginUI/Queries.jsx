@@ -21,7 +21,7 @@ export default function Queries() {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:8002/api/code/?lesson=${idmodule}`)
+        fetch(`https://db-learn-hub.onrender.com/api/code/?lesson=${idmodule}`)
             .then(response => response.json())
             .then(data => {
                 setQuestions(data);
@@ -61,7 +61,7 @@ export default function Queries() {
     const submitCode = () => {
         setResult('');
         const sqlQuery = encodeURIComponent(code);
-        fetch(`http://localhost:8001/${sqlQuery}`)
+        fetch(`https://sql-service-nbse.onrender.com/${sqlQuery}`)
             .then(response => response.json())
             .then(result => {
                 setResult(result);

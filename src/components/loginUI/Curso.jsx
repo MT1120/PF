@@ -16,7 +16,7 @@ export default function Prueba() {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8002/api/lesson/${idmodule}`)
+        fetch(`https://db-learn-hub.onrender.com/api/lesson/${idmodule}`)
             .then(response => response.json())
             .then(data => {
                 setLessonData(data);

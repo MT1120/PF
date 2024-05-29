@@ -24,7 +24,7 @@ export default function DragD() {
     const maxAttempts = 3;
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8002/api/fill/?lesson=${idmodule}`)
+        fetch(`https://db-learn-hub.onrender.com/api/fill/?lesson=${idmodule}`)
             .then(response => response.json())
             .then(data => {
                 setQuestions(data);

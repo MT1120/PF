@@ -42,7 +42,7 @@ export default function LoginH() {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8002/api/lesson/`)
+        fetch(`https://db-learn-hub.onrender.com/api/lesson/`)
             .then(response => response.json())
             .then(data => {
                 setLessons(data);
